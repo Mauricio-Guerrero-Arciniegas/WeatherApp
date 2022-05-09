@@ -11,14 +11,14 @@
   .App{
     background-color: black;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-size: cover;
   }
   
   .weathercard {
       padding: 2rem;
-      width: 300px;
-      height: 100vh;
+      width: 400px;
+      height: 90vh;
       justify-content: center;
       margin: auto;
       border-radius: 20px;

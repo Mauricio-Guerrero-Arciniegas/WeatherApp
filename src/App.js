@@ -54,7 +54,7 @@ function App() {
       <div className="weathercard">
         <div className="title">Weather-App</div>
         <img width="150px" height="150px" src={`http://openweathermap.org/img/wn/${weather.weather?.[0].icon}@2x.png`} alt="" />
-        <div className="main">{weather.weather[0].main}</div>
+        <div className="main">{weather.weather?.[0].main}</div>
         <div className="city">{weather.name}</div>
         <div className="country">{weather.sys?.country}</div>
         <div className="temp">

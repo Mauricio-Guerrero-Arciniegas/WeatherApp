@@ -6,6 +6,18 @@ import "./styles.css";
 
 function App() {
 
+  const dateBuilder = (d) => {
+    let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December",]
+    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+
+    let day = days[d.getDay()];
+    let date = d.getDate();
+    let month = months[d.getMonth()];
+    let year = d.getFullYear();
+
+    return `${day} ${date} ${month} ${year}`
+  }
+
   const [weather, setWeather] = useState({});
   const [temp, setTemp] = useState();
   const [isCelsius, setIsCelsius] = useState(true);
@@ -57,6 +69,7 @@ function App() {
         <div className="main">{weather.weather?.[0].main}</div>
         <div className="city">{weather.name}</div>
         <div className="country">{weather.sys?.country}</div>
+        <div className="date">{dateBuilder(new Date())}</div>
         <div className="temp">
           {isCelsius ? `${Math.round(temp)}°C`: `${Math.round(temp*(9/5)+32)} °F`}
           </div>

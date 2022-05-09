@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+
 import "./styles.css";
 
 
@@ -49,6 +50,7 @@ function App() {
   return (
     
     <div className="App">
+      
       <div className="weathercard">
         <div className="title">Weather-App</div>
         <img width="150px" height="150px" src={`http://openweathermap.org/img/wn/${weather.weather?.[0].icon}@2x.png`} alt="" />
